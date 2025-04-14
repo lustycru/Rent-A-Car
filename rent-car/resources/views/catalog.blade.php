@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1">
 
-    <title>Car Rental - Home</title>
+    <title>Car Rental - Catalog</title>
 
     <!-- Fonts -->
     <link rel="preconnect"
@@ -21,7 +21,7 @@
 </head>
 <body class="my-[28px] mx-[72px]">
 <header>
-    <nav class="mb-[28px]">
+    <nav class="mb-[56px]">
         <ul class="flex justify-between items-center">
             <li class="font-bold">
                 <a href="/"
@@ -44,93 +44,37 @@
             </li>
         </ul>
     </nav>
-
-    <div class="bg-[#5937E0] w-100 h-[24%] rounded-2xl py-[134px] px-[74px] mb-[60px]">
-        <div class="flex justify-between text-white items-center">
-            <div class="w-[550px] me-24">
-                <h2 class="work-sans text-[50px] font-[800] mb-[26px] leading-[50px]">Experience the road like never
-                    before</h2>
-                <p class="work-sans text-[14px] mb-[26px]">Rent a car in just a few taps. Fast, flexible, and
-                    affordable, your next ride is
-                    always ready, wherever and whenever you need it.</p>
-                <a href="/vehicles"
-                   class="bg-[#FF9E0C] px-4 py-2 rounded-[12px]">View all cars</a>
-            </div>
-
-            <div class="bg-white h-full w-[400px] rounded-xl p-[30px] text-black">
-                <h3 class="work-sans text-center text-[24px] font-[700] mb-[30px]">Book your car</h3>
-                <form method="POST"
-                      class="flex flex-col">
-                    <select name="veh-type"
-                            id="veh-type"
-                            class="bg-[#FAFAFA] px-4 py-2 rounded-[12px] mb-[20px]">
-                        <option value="">Vehicle type</option>
-                        @foreach ($vehType as $item)
-                            <option value="{{ $item->name }}">{{ $item->name }}</option>
-                        @endforeach
-                    </select>
-
-                    <select name="energy-type"
-                            id="energy-type"
-                            class="bg-[#FAFAFA] px-4 py-2 rounded-[12px] mb-[20px]">
-                        <option value="">Energy type</option>
-                        @foreach ($vehFuel as $item)
-                            <option value="{{ $item->fuel_type }}">{{ $item->fuel_type }}</option>
-                        @endforeach
-                    </select>
-
-                    <select name="gear-type"
-                            id="gear-type"
-                            class="bg-[#FAFAFA] px-4 py-2 rounded-[12px] mb-[40px]">
-                        <option value="">Type of gear</option>
-                        @foreach ($vehTrans as $item)
-                            <option value="{{ $item->transmission }}">{{ $item->transmission }}</option>
-                        @endforeach
-                    </select>
-
-                    <input type="submit"
-                           value="Book now"
-                           class="bg-[#FF9E0C] px-4 py-2 rounded-[12px] text-white cursor-pointer">
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="flex justify-between mb-[160px]">
-        <div class="flex flex-col items-center text-center w-1/3 px-4">
-            <img src="{{ asset('../build/assets/img/location.svg') }}"
-                 alt="location"
-                 class="mb-[20px]">
-            <h3 class="work-sans font-[700] text-[20px] mb-[10px]">Availability</h3>
-            <p class="w-4/5">A wide range of vehicles, available anytime, wherever you need them.</p>
-        </div>
-
-        <div class="flex flex-col items-center text-center w-1/3 px-4">
-            <img src="{{ asset('../build/assets/img/car.svg') }}"
-                 alt="car"
-                 class="mb-[20px]">
-            <h3 class="work-sans font-[700] text-[20px] mb-[10px]">Comfort</h3>
-            <p class="w-4/5">Enjoy a smooth, relaxing drive with clean, modern, well-equipped cars.</p>
-        </div>
-
-        <div class="flex flex-col items-center text-center w-1/3 px-4">
-            <img src="{{ asset('../build/assets/img/wallet.svg') }}"
-                 alt="wallet"
-                 class="mb-[20px]">
-            <h3 class="work-sans font-[700] text-[20px] mb-[10px]">Savings</h3>
-            <p class="w-4/5">Smart prices, no hidden fees — only pay when you actually drive.</p>
-        </div>
-    </div>
 </header>
 
 <main>
-    <div class="flex items-end justify-between mb-[40px]">
-        <h2 class="work-sans text-[50px] font-[800] mb-[26px] leading-[50px] w-[30%]">Choose the car that
-            suits you</h2>
-        <a href="/vehicles">View all -></a>
+    <h2 class="work-sans text-[40px] font-[800] mb-[26px] text-center">Select a vehicle group</h2>
+
+    <div class="mb-[48px]">
+        <div class="flex flex-col justify-center text-center">
+            <div>
+                <button class="rounded-full bg-[#5937E0] px-6 py-1.5 text-white me-2.5">All vehicles</button>
+                @foreach ($vehType as $item)
+                    <button class="rounded-full bg-[#FAFAFA] px-6 py-1.5 text-black me-2.5 mb-6">{{ ucfirst($item->name) }}</button>
+                @endforeach
+            </div>
+
+            <div>
+                <button class="rounded-full bg-[#5937E0] px-6 py-1.5 text-white me-2.5">All energy type</button>
+                @foreach ($vehFuel as $item)
+                    <button class="rounded-full bg-[#FAFAFA] px-6 py-1.5 text-black me-2.5 mb-6">{{ ucfirst($item->fuel_type) }}</button>
+                @endforeach
+            </div>
+
+            <div>
+                <button class="rounded-full bg-[#5937E0] px-6 py-1.5 text-white me-2.5">All types of gear</button>
+            @foreach ($vehTrans as $item)
+                    <button class="rounded-full bg-[#FAFAFA] px-6 py-1.5 text-black me-2.5 mb-6">{{ ucfirst($item->transmission) }}</button>
+                @endforeach
+            </div>
+        </div>
     </div>
 
-    <div class="grid grid-cols-3 gap-3 mb-[160px]">
+    <div class="grid grid-cols-3 gap-3 mb-[120px]">
         @foreach($allVeh as $item)
             <div class="bg-[#FAFAFA] p-[24px] rounded-2xl">
                 <img src="../build/assets/img/{{ $item->vehPhotos }}"
@@ -168,6 +112,21 @@
                 </div>
             </div>
         @endforeach
+    </div>
+
+    <div class="bg-[#FAFAFA] p-12 rounded-2xl flex justify-between items-center mb-[120px]">
+        <img src="{{ asset('../build/assets/img/toyota.svg') }}"
+             alt="toyota">
+        <img src="{{ asset('../build/assets/img/ford.svg') }}"
+             alt="ford">
+        <img src="{{ asset('../build/assets/img/mercedes.svg') }}"
+             alt="mercedes">
+        <img src="{{ asset('../build/assets/img/jeep.svg') }}"
+             alt="jeep">
+        <img src="{{ asset('../build/assets/img/bmw.svg') }}"
+             alt="bmw">
+        <img src="{{ asset('../build/assets/img/audi.svg') }}"
+             alt="audi">
     </div>
 </main>
 
@@ -207,7 +166,7 @@
         </div>
     </div>
 
-    <p class="font-[300] text-sm mb-10 text-center">© Copyright Car Rental  2024. Design by Figma. guru</p>
+    <p class="font-[300] text-sm mb-10 text-center">© Copyright Car Rental 2024. Design by Figma. guru</p>
 </footer>
 
 <script src="https://cdn.tailwindcss.com"></script>

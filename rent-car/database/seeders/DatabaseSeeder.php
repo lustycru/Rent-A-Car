@@ -17,12 +17,10 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         DB::table('vehicules_types')->insert([
-            ['name' => 'sedan'],
-            ['name' => 'minivan'],
-            ['name' => 'suv'],
-            ['name' => 'crossover'],
-            ['name' => 'pickup'],
-            ['name' => 'cabriolet'],
+            ['name' => 'Sport'],
+            ['name' => 'Sedan'],
+            ['name' => 'SUV'],
+            ['name' => 'Van'],
         ]);
 
         DB::table('equipments')->insert([
@@ -34,27 +32,28 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('vehicules')->insert([
-            ['brand' => 'Mercedes', 'model' => 'Sedan', 'year' => 2023, 'price_per_day' => 25.00, 'doors' => 4, 'fuel_type' => 'essence', 'air_conditioning' => true, 'seats' => 5, 'transmission' => 'automatique', 'vehicule_type_id' => 1],
-            ['brand' => 'Mercedes', 'model' => 'Sport', 'year' => 2023, 'price_per_day' => 50.00, 'doors' => 2, 'fuel_type' => 'diesel', 'air_conditioning' => true, 'seats' => 4, 'transmission' => 'manuelle', 'vehicule_type_id' => 6],
-            ['brand' => 'Mercedes', 'model' => 'Sedan', 'year' => 2023, 'price_per_day' => 45.00, 'doors' => 4, 'fuel_type' => 'électrique', 'air_conditioning' => true, 'seats' => 5, 'transmission' => 'automatique', 'vehicule_type_id' => 1],
-            ['brand' => 'Porsche', 'model' => 'SUV', 'year' => 2023, 'price_per_day' => 40.00, 'doors' => 4, 'fuel_type' => 'hybride', 'air_conditioning' => true, 'seats' => 5, 'transmission' => 'automatique', 'vehicule_type_id' => 3],
-            ['brand' => 'Toyota', 'model' => 'Sedan', 'year' => 2023, 'price_per_day' => 35.00, 'doors' => 4, 'fuel_type' => 'essence', 'air_conditioning' => true, 'seats' => 5, 'transmission' => 'manuelle', 'vehicule_type_id' => 1],
-            ['brand' => 'Porsche', 'model' => 'SUV', 'year' => 2023, 'price_per_day' => 50.00, 'doors' => 4, 'fuel_type' => 'diesel', 'air_conditioning' => true, 'seats' => 5, 'transmission' => 'automatique', 'vehicule_type_id' => 3],
-            ['brand' => 'Mercedes', 'model' => 'Van', 'year' => 2023, 'price_per_day' => 50.00, 'doors' => 5, 'fuel_type' => 'hybride', 'air_conditioning' => true, 'seats' => 7, 'transmission' => 'automatique', 'vehicule_type_id' => 2],
-            ['brand' => 'Toyota', 'model' => 'Sport', 'year' => 2023, 'price_per_day' => 60.00, 'doors' => 2, 'fuel_type' => 'électrique', 'air_conditioning' => true, 'seats' => 4, 'transmission' => 'manuelle', 'vehicule_type_id' => 6],
-            ['brand' => 'Maybach', 'model' => 'Sedan', 'year' => 2023, 'price_per_day' => 70.00, 'doors' => 4, 'fuel_type' => 'hybride', 'air_conditioning' => true, 'seats' => 5, 'transmission' => 'automatique', 'vehicule_type_id' => 1],
+            ['brand' => 'Mercedes', 'model' => 'C-Class', 'year' => 2023, 'price_per_day' => 25, 'doors' => 4, 'fuel_type' => 'Essence', 'air_conditioning' => true, 'seats' => 5, 'Transmission' => 'Automatique', 'vehicule_type_id' => 2],
+            ['brand' => 'Mercedes', 'model' => 'S-Class', 'year' => 2023, 'price_per_day' => 50, 'doors' => 2, 'fuel_type' => 'Diesel', 'air_conditioning' => true, 'seats' => 4, 'Transmission' => 'Manuelle', 'vehicule_type_id' => 1],
+            ['brand' => 'Mercedes', 'model' => 'EQC', 'year' => 2023, 'price_per_day' => 45, 'doors' => 4, 'fuel_type' => 'Electrique', 'air_conditioning' => true, 'seats' => 5, 'Transmission' => 'Automatique', 'vehicule_type_id' => 2],
+            ['brand' => 'Porsche', 'model' => 'Panamera', 'year' => 2023, 'price_per_day' => 40, 'doors' => 4, 'fuel_type' => 'Hybride', 'air_conditioning' => true, 'seats' => 5, 'Transmission' => 'Automatique', 'vehicule_type_id' => 3],
+            ['brand' => 'Toyota', 'model' => 'Corolla', 'year' => 2023, 'price_per_day' => 35, 'doors' => 4, 'fuel_type' => 'Essence', 'air_conditioning' => true, 'seats' => 5, 'Transmission' => 'Manuelle', 'vehicule_type_id' => 2],
+            ['brand' => 'Porsche', 'model' => 'Cayenne', 'year' => 2023, 'price_per_day' => 50, 'doors' => 4, 'fuel_type' => 'Diesel', 'air_conditioning' => true, 'seats' => 5, 'Transmission' => 'Automatique', 'vehicule_type_id' => 3],
+            ['brand' => 'Mercedes', 'model' => 'GLS', 'year' => 2023, 'price_per_day' => 50, 'doors' => 5, 'fuel_type' => 'Hybride', 'air_conditioning' => true, 'seats' => 7, 'Transmission' => 'Automatique', 'vehicule_type_id' => 4],
+            ['brand' => 'Toyota', 'model' => 'Supra', 'year' => 2023, 'price_per_day' => 60, 'doors' => 2, 'fuel_type' => 'Electrique', 'air_conditioning' => true, 'seats' => 4, 'Transmission' => 'Manuelle', 'vehicule_type_id' => 1],
+            ['brand' => 'Maybach', 'model' => 'S-Class', 'year' => 2023, 'price_per_day' => 70, 'doors' => 4, 'fuel_type' => 'Hybride', 'air_conditioning' => true, 'seats' => 5, 'Transmission' => 'Automatique', 'vehicule_type_id' => 2],
         ]);
 
+
         DB::table('vehicules_photos')->insert([
-            ['vehicule_id' => 1, 'photo_path' => 'vehicule1.jpg', 'display_order' => '3'],
-            ['vehicule_id' => 2, 'photo_path' => 'vehicule2.jpg', 'display_order' => '3'],
-            ['vehicule_id' => 3, 'photo_path' => 'vehicule3.jpg', 'display_order' => '3'],
-            ['vehicule_id' => 4, 'photo_path' => 'vehicule4.jpg', 'display_order' => '3'],
-            ['vehicule_id' => 5, 'photo_path' => 'vehicule5.jpg', 'display_order' => '3'],
-            ['vehicule_id' => 6, 'photo_path' => 'vehicule6.jpg', 'display_order' => '3'],
-            ['vehicule_id' => 7, 'photo_path' => 'vehicule7.jpg', 'display_order' => '3'],
-            ['vehicule_id' => 8, 'photo_path' => 'vehicule8.jpg', 'display_order' => '3'],
-            ['vehicule_id' => 9, 'photo_path' => 'vehicule9.jpg', 'display_order' => '3'],
+            ['vehicule_id' => 1, 'image_url' => 'veh1.svg', 'display_order' => 0],
+            ['vehicule_id' => 2, 'image_url' => 'veh2.svg', 'display_order' => 0],
+            ['vehicule_id' => 3, 'image_url' => 'veh3.svg', 'display_order' => 0],
+            ['vehicule_id' => 4, 'image_url' => 'veh4.svg', 'display_order' => 0],
+            ['vehicule_id' => 5, 'image_url' => 'veh5.svg', 'display_order' => 0],
+            ['vehicule_id' => 6, 'image_url' => 'veh6.svg', 'display_order' => 0],
+            ['vehicule_id' => 7, 'image_url' => 'veh7.svg', 'display_order' => 0],
+            ['vehicule_id' => 8, 'image_url' => 'veh8.svg', 'display_order' => 0],
+            ['vehicule_id' => 9, 'image_url' => 'veh9.svg', 'display_order' => 0],
         ]);
 
         DB::table('vehicules_equipments')->insert([

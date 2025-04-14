@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('brand', 100)->nullable(false);
             $table->string('model', 100)->nullable(false);
             $table->integer('year')->nullable(false);
-            $table->decimal('price_per_day', 10, 2)->nullable(false);
+            $table->integer('price_per_day')->nullable(false);
             $table->integer('doors')->nullable(false);
             $table->enum('fuel_type', ['essence', 'diesel', 'électrique', 'hybride'])->nullable(false);
             $table->boolean('air_conditioning')->default(false)->nullable(false);
