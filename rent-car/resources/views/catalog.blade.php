@@ -52,30 +52,30 @@
 
     <div class="mb-[48px]">
         <div class="flex flex-col justify-center text-center">
-            <div>
-                <button class="rounded-full bg-[#5937E0] px-6 py-1.5 text-white me-2.5">All vehicles</button>
+            <div class="mb-6">
+                <a href="/vehicles" class="rounded-full bg-[#5937E0] px-6 py-1.5 text-white me-2.5">All vehicles</a>
                 @foreach ($vehType as $item)
-                    <button class="rounded-full bg-[#FAFAFA] px-6 py-1.5 text-black me-2.5 mb-6">{{ ucfirst($item->name) }}</button>
+                    <a href="/vehicles/type/{{ urlencode(strtolower($item->name)) }}" class="rounded-full bg-[#FAFAFA] px-6 py-1.5 text-black me-2.5 link">{{ ucfirst($item->name) }}</a>
                 @endforeach
             </div>
 
-            <div>
-                <button class="rounded-full bg-[#5937E0] px-6 py-1.5 text-white me-2.5">All energy type</button>
+            <div class="mb-6">
+                <a href="/vehicles" class="rounded-full bg-[#5937E0] px-6 py-1.5 text-white me-2.5">All energy type</a>
                 @foreach ($vehFuel as $item)
-                    <button class="rounded-full bg-[#FAFAFA] px-6 py-1.5 text-black me-2.5 mb-6">{{ ucfirst($item->fuel_type) }}</button>
+                    <a href="/vehicles/energy/{{ urlencode(strtolower($item->fuel_type)) }}" class="rounded-full bg-[#FAFAFA] px-6 py-1.5 text-black me-2.5 link">{{ ucfirst($item->fuel_type) }}</a>
                 @endforeach
             </div>
 
-            <div>
-                <button class="rounded-full bg-[#5937E0] px-6 py-1.5 text-white me-2.5">All types of gear</button>
+            <div class="mb-6">
+                <a href="/vehicles" class="rounded-full bg-[#5937E0] px-6 py-1.5 text-white me-2.5">All types of gear</a>
             @foreach ($vehTrans as $item)
-                    <button class="rounded-full bg-[#FAFAFA] px-6 py-1.5 text-black me-2.5 mb-6">{{ ucfirst($item->transmission) }}</button>
+                    <a href="/vehicles/gear/{{ urlencode(strtolower($item->transmission)) }}" class="rounded-full bg-[#FAFAFA] px-6 py-1.5 text-black me-2.5 link">{{ ucfirst($item->transmission) }}</a>
                 @endforeach
             </div>
         </div>
     </div>
 
-    <div class="grid grid-cols-3 gap-3 mb-[120px]">
+    <div class="grid grid-cols-3 gap-3 mb-[120px] cars">
         @foreach($allVeh as $item)
             <div class="bg-[#FAFAFA] p-[24px] rounded-2xl">
                 <img src="../build/assets/img/{{ $item->vehPhotos }}"
@@ -171,5 +171,6 @@
 </footer>
 
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="{{ asset('../build/assets/js/catalog.js') }}"></script>
 </body>
 </html>

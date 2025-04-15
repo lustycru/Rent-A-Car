@@ -11,4 +11,5 @@ Route::get('/vehicles', [CatalogController::class, 'index'])->name('vehicles.all
 Route::get('/vehicle/{id}', [DetailController::class, 'index'])->name('vehicle.detail');;
 Route::get('/reservation/{id}', [ReservationController::class, 'index'])->name('reservation.show');
 Route::post('/reservation/{id}', [ReservationController::class, 'send'])->name('reservation.send');
+Route::get('/vehicles/{param}/{value}', [CatalogController::class, 'filter']);
 
