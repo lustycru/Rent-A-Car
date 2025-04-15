@@ -1,8 +1,0 @@
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
-
-* {
-    font-family: "Inter", sans-serif !important;
-}

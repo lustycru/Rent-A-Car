@@ -17,7 +17,7 @@
           rel="stylesheet">
 
     <!-- Styles / Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css'])
 </head>
 <body class="my-[28px] mx-[72px]">
 <header>
@@ -99,10 +99,10 @@
                                                             alt="gear">{{ ucfirst($item->vehFuel) }}</p>
                     @if($item->vehAir == 1)
                         <p class="font-[700] flex gap-1.5"><img src="{{ asset('../build/assets/img/option.svg') }}"
-                                                                alt="gear">Avec air conditioner</p>
+                                                                alt="gear">With air conditioner</p>
                     @else
                         <p class="font-[700] flex gap-1.5"><img src="{{ asset('../build/assets/img/option.svg') }}"
-                                                                alt="gear">Sans air conditioner</p>
+                                                                alt="gear">Without air conditioner</p>
                     @endif
                 </div>
 

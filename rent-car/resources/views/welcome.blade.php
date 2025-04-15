@@ -17,7 +17,7 @@
           rel="stylesheet">
 
     <!-- Styles / Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css'])
 </head>
 <body class="my-[28px] mx-[72px]">
 <header>
@@ -45,7 +45,7 @@
         </ul>
     </nav>
 
-    <div class="bg-[#5937E0] w-100 h-[24%] rounded-2xl py-[134px] px-[74px] mb-[60px]">
+    <div class="bg-[#5937E0] w-100 h-[24%] rounded-2xl py-[100px] px-[74px] mb-[60px]">
         <div class="flex justify-between text-white items-center">
             <div class="w-[550px] me-24">
                 <h2 class="work-sans text-[50px] font-[800] mb-[26px] leading-[50px]">Experience the road like never
@@ -54,7 +54,7 @@
                     affordable, your next ride is
                     always ready, wherever and whenever you need it.</p>
                 <a href="/vehicles"
-                   class="bg-[#FF9E0C] px-4 py-2 rounded-[12px]">View all cars</a>
+                   class="bg-[#FF9E0C] px-6 py-2.5 rounded-[12px]">View all cars</a>
             </div>
 
             <div class="bg-white h-full w-[400px] rounded-xl p-[30px] text-black">
@@ -90,7 +90,7 @@
 
                     <input type="submit"
                            value="Book now"
-                           class="bg-[#FF9E0C] px-4 py-2 rounded-[12px] text-white cursor-pointer">
+                           class="bg-[#FF9E0C] px-4 py-2.5 rounded-[12px] text-white cursor-pointer">
                 </form>
             </div>
         </div>
@@ -155,10 +155,10 @@
                                                             alt="gear">{{ ucfirst($item->vehFuel) }}</p>
                     @if($item->vehAir == 1)
                         <p class="font-[700] flex gap-1.5"><img src="{{ asset('../build/assets/img/option.svg') }}"
-                                                                alt="gear">Avec air conditioner</p>
+                                                                alt="gear">With air conditioner</p>
                     @else
                         <p class="font-[700] flex gap-1.5"><img src="{{ asset('../build/assets/img/option.svg') }}"
-                                                                alt="gear">Sans air conditioner</p>
+                                                                alt="gear">Without air conditioner</p>
                     @endif
                 </div>
 
