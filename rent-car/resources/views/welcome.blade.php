@@ -17,7 +17,8 @@
           rel="stylesheet">
 
     <!-- Styles / Scripts -->
-    @vite(['resources/css/app.css'])
+    <link rel="stylesheet"
+          href="{{ asset('../build/assets/css/app.css') }}">
 </head>
 <body class="my-[28px] mx-[72px]">
 <header>

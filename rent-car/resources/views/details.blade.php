@@ -17,7 +17,8 @@
           rel="stylesheet">
 
     <!-- Styles / Scripts -->
-    @vite(['resources/css/app.css'])
+    <link rel="stylesheet"
+          href="{{ asset('../build/assets/css/app.css') }}">
 </head>
 <body class="my-[28px] mx-[72px]">
 <header>
@@ -63,13 +64,13 @@
                     <div class="flex">
                         <img src="{{ asset('../build/assets/img/carouselFirstPhoto.png') }}"
                              alt="firstPhotoCarousel"
-                             class="me-8">
+                             class="me-8 imgCarousel">
                         <img src="{{ asset('../build/assets/img/carouselSecondPhoto.png') }}"
-                             alt="firstPhotoCarousel"
-                             class="me-8">
+                             alt="secondPhotoCarousel"
+                             class="me-8 imgCarousel">
                         <img src="{{ asset('../build/assets/img/carouselThirdPhoto.png') }}"
-                             alt="firstPhotoCarousel"
-                             class="me-8">
+                             alt="thirdPhotoCarousel"
+                             class="me-8 imgCarousel">
                     </div>
                 </div>
 
@@ -195,12 +196,10 @@
         @endforeach
     </div>
 
-    <div id="image-modal"
-         class="fixed inset-0 bg-black bg-opacity-75 hidden justify-center items-center z-50">
-        <img id="modal-img"
-             src=""
-             class="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
-             alt="Zoomed Image">
+    <div class="fixed inset-0 bg-black bg-opacity-75 hidden justify-center items-center z-50 modalDiv">
+        <img src=""
+             class="w-[400px] rounded-lg modalImg"
+             alt="zoomed image">
     </div>
 </main>
 
@@ -244,6 +243,6 @@
 </footer>
 
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="{{ asset('../build/assets/js/details.js') }}"></script>
+<script src="{{ asset('../build/assets/js/vehicle.js') }}"></script>
 </body>
 </html>

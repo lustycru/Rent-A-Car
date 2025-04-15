@@ -67,13 +67,13 @@
                     <div class="flex">
                         <img src="{{ asset('../build/assets/img/carouselFirstPhoto.png') }}"
                              alt="firstPhotoCarousel"
-                             class="me-8">
+                             class="me-8 imgCarousel">
                         <img src="{{ asset('../build/assets/img/carouselSecondPhoto.png') }}"
-                             alt="firstPhotoCarousel"
-                             class="me-8">
+                             alt="secondPhotoCarousel"
+                             class="me-8 imgCarousel">
                         <img src="{{ asset('../build/assets/img/carouselThirdPhoto.png') }}"
-                             alt="firstPhotoCarousel"
-                             class="me-8">
+                             alt="thirdPhotoCarousel"
+                             class="me-8 imgCarousel">
                     </div>
                 </div>
 
@@ -169,6 +169,11 @@
         </div>
     </div>
 
+    <div class="fixed inset-0 bg-black bg-opacity-75 hidden justify-center items-center z-50 modalDiv">
+        <img src=""
+             class="w-[400px] rounded-lg modalImg"
+             alt="zoomed image">
+    </div>
 </main>
 
 <footer>
@@ -213,6 +218,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="{{ asset('../build/assets/js/reservation.js') }}"></script>
+<script src="{{ asset('../build/assets/js/vehicle.js') }}"></script>
 
 <script>
     const unavailableRanges = @json(
