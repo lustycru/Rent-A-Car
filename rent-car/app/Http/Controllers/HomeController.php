@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-    public function index() {
+    public function index(Request $request) {
 
         $vehFuel = DB::select('SELECT DISTINCT fuel_type FROM vehicules');
         $vehTrans = DB::select('SELECT DISTINCT transmission FROM vehicules');

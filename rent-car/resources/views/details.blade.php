@@ -33,7 +33,10 @@
             </li>
 
 
+            <li class="ms-72"><a href="/">Home</a></li>
             <li class="font-bold"><a href="/vehicles">Vehicles</a></li>
+            <li class=""><a href="">Details</a></li>
+            <li class="me-72"><a href="">About Us</a></li>
 
             <li class="flex gap-1.5">
                 <img src="{{ asset('../build/assets/img/iphone.svg') }}"

@@ -32,8 +32,10 @@
                     Car Rental</a>
             </li>
 
-
-            <li class="font-bold"><a href="/vehicles">Vehicles</a></li>
+            <li class="font-bold ms-72"><a href="/">Home</a></li>
+            <li class=""><a href="/vehicles">Vehicles</a></li>
+            <li class=""><a href="">Details</a></li>
+            <li class="me-72"><a href="">About Us</a></li>
 
             <li class="flex gap-1.5">
                 <img src="{{ asset('../build/assets/img/iphone.svg') }}"
@@ -62,13 +64,18 @@
                 <h3 class="work-sans text-center text-[24px] font-[700] mb-[30px]">Book your car</h3>
                 <form method="POST"
                       class="flex flex-col">
+                    @csrf
                     <select name="veh-type"
                             id="veh-type"
                             class="bg-[#FAFAFA] px-4 py-2 rounded-[12px] mb-[20px]">
                         <option value="">Vehicle type</option>
                         @foreach ($vehType as $item)
-                            <option value="{{ $item->name }}">{{ $item->name }}</option>
+                            <option value="{{ $item->name }}">{{ ucfirst($item->name) }}</option>
                         @endforeach
+
+                        @error('veh-type')
+                        <p class="text-red-600 mt-1">{{ $message }}</p>
+                        @enderror
                     </select>
 
                     <select name="energy-type"
@@ -76,8 +83,12 @@
                             class="bg-[#FAFAFA] px-4 py-2 rounded-[12px] mb-[20px]">
                         <option value="">Energy type</option>
                         @foreach ($vehFuel as $item)
-                            <option value="{{ $item->fuel_type }}">{{ $item->fuel_type }}</option>
+                            <option value="{{ $item->fuel_type }}">{{ ucfirst($item->fuel_type) }}</option>
                         @endforeach
+
+                        @error('energy-type')
+                        <p class="text-red-600 mt-1">{{ $message }}</p>
+                        @enderror
                     </select>
 
                     <select name="gear-type"
@@ -85,8 +96,12 @@
                             class="bg-[#FAFAFA] px-4 py-2 rounded-[12px] mb-[40px]">
                         <option value="">Type of gear</option>
                         @foreach ($vehTrans as $item)
-                            <option value="{{ $item->transmission }}">{{ $item->transmission }}</option>
+                            <option value="{{ $item->transmission }}">{{ ucfirst($item->transmission) }}</option>
                         @endforeach
+
+                        @error('gear-type')
+                        <p class="text-red-600 mt-1">{{ $message }}</p>
+                        @enderror
                     </select>
 
                     <input type="submit"

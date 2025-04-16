@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Vehicule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class CatalogController extends Controller
 {
-    public function index() {
+    public function index(Request $request) {
 
         $vehFuel = DB::select('SELECT DISTINCT fuel_type FROM vehicules');
         $vehTrans = DB::select('SELECT DISTINCT transmission FROM vehicules');

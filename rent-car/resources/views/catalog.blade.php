@@ -32,8 +32,10 @@
                     Car Rental</a>
             </li>
 
-
-            <li class="font-bold"><a href="/vehicles">Vehicles</a></li>
+                <li class="ms-72"><a href="/">Home</a></li>
+                <li class="font-bold"><a href="/vehicles">Vehicles</a></li>
+                <li class=""><a href="">Details</a></li>
+                <li class="me-72"><a href="">About Us</a></li>
 
             <li class="flex gap-1.5">
                 <img src="{{ asset('../build/assets/img/iphone.svg') }}"
@@ -53,23 +55,29 @@
     <div class="mb-[48px]">
         <div class="flex flex-col justify-center text-center">
             <div class="mb-6">
-                <a href="/vehicles" class="rounded-full bg-[#5937E0] px-6 py-1.5 text-white me-2.5">All vehicles</a>
+                <a href="/vehicles"
+                   class="rounded-full bg-[#5937E0] px-6 py-1.5 text-white me-2.5 ogLink">All vehicles</a>
                 @foreach ($vehType as $item)
-                    <a href="/vehicles/type/{{ urlencode(strtolower($item->name)) }}" class="rounded-full bg-[#FAFAFA] px-6 py-1.5 text-black me-2.5 link">{{ ucfirst($item->name) }}</a>
+                    <a href="/vehicles/type/{{ urlencode(strtolower($item->name)) }}"
+                       class="rounded-full bg-[#FAFAFA] px-6 py-1.5 text-black me-2.5 link">{{ ucfirst($item->name) }}</a>
                 @endforeach
             </div>
 
             <div class="mb-6">
-                <a href="/vehicles" class="rounded-full bg-[#5937E0] px-6 py-1.5 text-white me-2.5">All energy type</a>
+                <a href="/vehicles"
+                   class="rounded-full bg-[#5937E0] px-6 py-1.5 text-white me-2.5 ogLink">All energy type</a>
                 @foreach ($vehFuel as $item)
-                    <a href="/vehicles/energy/{{ urlencode(strtolower($item->fuel_type)) }}" class="rounded-full bg-[#FAFAFA] px-6 py-1.5 text-black me-2.5 link">{{ ucfirst($item->fuel_type) }}</a>
+                    <a href="/vehicles/energy/{{ urlencode(strtolower($item->fuel_type)) }}"
+                       class="rounded-full bg-[#FAFAFA] px-6 py-1.5 text-black me-2.5 link">{{ ucfirst($item->fuel_type) }}</a>
                 @endforeach
             </div>
 
             <div class="mb-6">
-                <a href="/vehicles" class="rounded-full bg-[#5937E0] px-6 py-1.5 text-white me-2.5">All types of gear</a>
-            @foreach ($vehTrans as $item)
-                    <a href="/vehicles/gear/{{ urlencode(strtolower($item->transmission)) }}" class="rounded-full bg-[#FAFAFA] px-6 py-1.5 text-black me-2.5 link">{{ ucfirst($item->transmission) }}</a>
+                <a href="/vehicles"
+                   class="rounded-full bg-[#5937E0] px-6 py-1.5 text-white me-2.5 ogLink">All types of gear</a>
+                @foreach ($vehTrans as $item)
+                    <a href="/vehicles/gear/{{ urlencode(strtolower($item->transmission)) }}"
+                       class="rounded-full bg-[#FAFAFA] px-6 py-1.5 text-black me-2.5 link">{{ ucfirst($item->transmission) }}</a>
                 @endforeach
             </div>
         </div>
