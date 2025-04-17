@@ -54,6 +54,42 @@ class DatabaseSeeder extends Seeder
             ['vehicule_id' => 7, 'image_url' => 'veh7.svg', 'display_order' => 0],
             ['vehicule_id' => 8, 'image_url' => 'veh8.svg', 'display_order' => 0],
             ['vehicule_id' => 9, 'image_url' => 'veh9.svg', 'display_order' => 0],
+
+            ['vehicule_id' => 1, 'image_url' => 'veh1.2.jpg', 'display_order' => 1],
+            ['vehicule_id' => 1, 'image_url' => 'veh1.3.jpg', 'display_order' => 2],
+            ['vehicule_id' => 1, 'image_url' => 'veh1.4.jpg', 'display_order' => 3],
+
+            ['vehicule_id' => 2, 'image_url' => 'veh2.2.jpg', 'display_order' => 1],
+            ['vehicule_id' => 2, 'image_url' => 'veh2.3.jpg', 'display_order' => 2],
+            ['vehicule_id' => 2, 'image_url' => 'veh2.4.jpg', 'display_order' => 3],
+
+            ['vehicule_id' => 3, 'image_url' => 'veh3.2.jpg', 'display_order' => 1],
+            ['vehicule_id' => 3, 'image_url' => 'veh3.3.jpg', 'display_order' => 2],
+            ['vehicule_id' => 3, 'image_url' => 'veh3.4.jpg', 'display_order' => 3],
+
+            ['vehicule_id' => 4, 'image_url' => 'veh4.2.jpg', 'display_order' => 1],
+            ['vehicule_id' => 4, 'image_url' => 'veh4.3.jpg', 'display_order' => 2],
+            ['vehicule_id' => 4, 'image_url' => 'veh4.4.jpg', 'display_order' => 3],
+
+            ['vehicule_id' => 5, 'image_url' => 'veh5.2.jpg', 'display_order' => 1],
+            ['vehicule_id' => 5, 'image_url' => 'veh5.3.jpg', 'display_order' => 2],
+            ['vehicule_id' => 5, 'image_url' => 'veh5.4.jpg', 'display_order' => 3],
+
+            ['vehicule_id' => 6, 'image_url' => 'veh6.2.jpg', 'display_order' => 1],
+            ['vehicule_id' => 6, 'image_url' => 'veh6.3.jpg', 'display_order' => 2],
+            ['vehicule_id' => 6, 'image_url' => 'veh6.4.jpg', 'display_order' => 3],
+
+            ['vehicule_id' => 7, 'image_url' => 'veh7.2.jpg', 'display_order' => 1],
+            ['vehicule_id' => 7, 'image_url' => 'veh7.3.jpg', 'display_order' => 2],
+            ['vehicule_id' => 7, 'image_url' => 'veh7.4.jpg', 'display_order' => 3],
+
+            ['vehicule_id' => 8, 'image_url' => 'veh8.2.jpg', 'display_order' => 1],
+            ['vehicule_id' => 8, 'image_url' => 'veh8.3.jpg', 'display_order' => 2],
+            ['vehicule_id' => 8, 'image_url' => 'veh8.4.jpg', 'display_order' => 3],
+
+            ['vehicule_id' => 9, 'image_url' => 'veh9.2.jpg', 'display_order' => 1],
+            ['vehicule_id' => 9, 'image_url' => 'veh9.3.jpg', 'display_order' => 2],
+            ['vehicule_id' => 9, 'image_url' => 'veh9.4.jpg', 'display_order' => 3],
         ]);
 
         DB::table('vehicules_equipments')->insert([

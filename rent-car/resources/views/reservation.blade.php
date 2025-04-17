@@ -68,15 +68,11 @@
                          alt="wallet"
                          class="mb-[20px] w-[500px]">
                     <div class="flex">
-                        <img src="{{ asset('../build/assets/img/carouselFirstPhoto.png') }}"
-                             alt="firstPhotoCarousel"
-                             class="me-8 imgCarousel">
-                        <img src="{{ asset('../build/assets/img/carouselSecondPhoto.png') }}"
-                             alt="secondPhotoCarousel"
-                             class="me-8 imgCarousel">
-                        <img src="{{ asset('../build/assets/img/carouselThirdPhoto.png') }}"
-                             alt="thirdPhotoCarousel"
-                             class="me-8 imgCarousel">
+                        @foreach($photos as $item2)
+                            <img src="../build/assets/img/{{ $item2->image_url }}"
+                                 alt="carouselPhoto{{ ucfirst($item2->image_url) }}"
+                                 class="me-8 imgCarousel cursor-pointer rounded w-[200px]">
+                        @endforeach
                     </div>
                 </div>
 
